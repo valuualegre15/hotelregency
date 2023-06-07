@@ -1,0 +1,780 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    scroll-behavior: smooth;
+    font-family: sans-serif;
+}
+
+.container{
+    max-width: 90%;
+    margin: auto;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+a:hover{
+   transition: 0.5s; 
+   cursor: pointer;
+}
+
+.flex1{
+    display: flex;
+    justify-content: space-between;
+}
+
+.flex{
+    display: flex;
+}
+
+.head{
+    height: 10vh;
+    line-height: 10vh;
+}
+
+.head i{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #f8f6f6;
+    text-align: center;
+    color: #0f0f0f;
+    line-height: 30px;
+}
+
+.head img{
+    margin-top: 10px;
+    width: 50px;
+}
+
+header{
+    background: #b69e9e57;
+    padding: 15px 0 15px 0;
+    color: rgb(0, 0, 0);
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+}
+
+.hamburger{
+display: none;
+}
+
+.bar{
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    transition: all 0.5s ease-in-out;
+    background: rgb(255, 255, 255);
+}
+
+.nav-menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sticky_logo img{
+    width: 100px;
+}
+
+header ul{
+    padding: 0 30px 0 0;
+    margin-left: 80px;
+}
+
+header li{
+    margin-right: 50px;
+}
+
+header li a{
+    font-size: 15px;
+    color: rgb(100, 100, 100);
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: 0.5s;
+    margin-left:3px;
+}
+
+header ul li a:hover{
+    color: rgb(0, 0, 0);
+    transition: 0.5s;
+}
+
+header .head_contact{
+    position: relative;
+}
+
+header .head_contact i{
+    position: absolute;
+    top: -40px;
+    left: -60px;
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+    background: white;
+    color: black;
+    border-radius: 50%;
+    transform: rotate(-45deg);
+    border: 5px solid #b69e9e57;
+    font-size: 30px;
+}
+
+header .sticky_logo{
+    display: none;
+}
+
+header.sticky .sticky_logo{
+    display: block;
+    width: 50%;
+    height: 50px;
+    margin-top: -10px;
+}
+
+header.sticky{
+    z-index: 999;
+    position: fixed;
+    width: 100%;
+    height: 12vh;
+    background: #313538;
+    transition: 0.5s;
+    top: 0;
+    padding: 30px 0 0 0;
+}
+
+header .sticky ul li a{
+    color: white;
+}
+
+@media only screen and (max-width:760px)  {
+    .header .head_contact,
+    .logo {
+        display: none;
+       }
+
+       .header.sticky{
+        height: 8vh;
+       }
+
+       .header.sticky .nav-menu{
+        background:#313538;
+       }
+
+       .navbar{
+        height: 5vh;
+        justify-content: space-between;
+       }
+
+       .nav-menu{
+        position: fixed;
+        left: -100%;
+        top: 11rem;
+        flex-direction: column;
+        background: #313538;
+        width: 100%;
+        border-radius: 10px;
+        text-align: center;
+        transition: 0.5s;
+        z-index: 99;
+       }
+
+       .header.sticky .nav-menu{
+        top: 5rem;
+       }
+
+       .header ul li a{
+        color: white;
+       }
+
+       .nav-menu.active{
+        left: 0;
+       }
+
+       header li{
+        margin: 3.5rem 0;
+       }
+
+       .hamburger{
+        display: block;
+        cursor: pointer;
+       }
+
+       .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+       }
+
+       .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotateY(45deg);
+       }
+
+       .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotateY(-45deg);
+       }
+
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 30px;
+}
+
+.home{
+    background-image: url(img/brazil-3453957_1920.jpg);
+    height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+}
+
+.home h1{
+    font-family: sans-serif, cursive;
+    font-size: 150px;
+    color: white;
+    padding-top: 10%;
+}
+
+.home p{
+    color: white;
+}
+
+.home .content{
+    text-align: left;
+    color: black;
+    margin-top: 7%;
+}
+
+.home .box{
+    background: white;
+    padding: 35px;
+    border-radius: 5%;
+}
+
+.home input{
+    margin-top: 10px;
+}
+
+input{
+    border: none;
+    outline: none;
+}
+
+button{
+    background: #313538;
+    color: white;
+    padding: 10px 20px;
+    outline: none;
+    border: none;
+    border-radius: 30px;
+}
+
+button i{
+    margin-left: 10px;
+    font-size: 25px;
+    margin-top: 10px;
+}
+
+button span{
+    margin-top: 5px;
+}
+
+.top{
+    margin-top: 80px;
+}
+
+.mtop{
+    margin-top: 40px;
+}
+
+.heading{
+    text-align: center;
+}
+
+.heading h5{
+    font-weight: 400;
+    letter-spacing: 5px;
+    color: black;
+    padding-top: 20px;
+    text-transform: uppercase;
+}
+
+.heading h2{
+    color: #000000;
+    font-size: 45px;
+    font-family: serif;
+    font-weight: bold;
+    margin: 10px 0 20px 0;
+}
+
+.left , .right{
+    width: 50%;
+}
+
+h3{
+    font-size: 35px;
+    font-family: serif;
+    color: #000000;
+    margin-bottom: 20px;
+}
+
+.about .left{
+   padding: 20px;
+}
+
+p{
+    line-height: 30px;
+    color: #a4a4a4;
+    margin-bottom: 20px;
+    font-size: 15px;
+}
+
+.about{
+    position: relative;
+    padding-bottom: 70px;
+}
+
+.about .right{
+    position: relative;
+}
+
+.about .right::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #b3afaf;
+    width: 92%;
+    height: 61vh;
+    z-index: -1;
+    margin: 50px;
+}
+
+.right img{
+    width: 550px;
+}
+
+.about::after{
+    content: '';
+    position: absolute;
+    top: -5%;
+    left: 0;
+    background-image:url(img/line1.png);
+    background-size: cover ;
+    background-repeat: no-repeat;
+    height: 50px;
+    width: 100%;
+}
+
+button i{
+    margin-top: -1px;
+}
+
+.about::before{
+    content: '';
+    position: absolute;
+    bottom: -5%;
+    left: 0;
+    background-image:url(img/line2.png);
+    background-size: cover ;
+    background-repeat: no-repeat;
+    height: 50px;
+    width: 100%;
+}
+
+.wrapper{
+    background-image: url(img/bas-van-den-eijkhof-s6W9cOkOFHc-unsplash.jpg);
+    height: 80vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+}
+
+.wrapper .container{
+    max-width: 50%;
+    margin: auto;
+}
+
+.wrapper .item{
+    background: white;
+    padding: 50px;
+    margin-top: 15%;
+    border: 30px solid #f3f3f3;
+    border-bottom: none;
+}
+
+.wrapper .heading{
+    text-align: left;
+}
+
+.owl-nav .owl-prev,
+.owl-nav .owl-next{
+    height: 47px;
+    position: absolute;
+    top: 60% ;
+    width: 26px;
+    cursor: pointer;
+    background: none !important;
+}
+
+.owl-nav .owl-prev{
+    left: 0;
+}
+
+.owl-nav .owl-next{
+    right: 27px;
+}
+
+.owl-nav .owl-prev i,
+.owl-nav .owl-next i{
+      background: rgb(255, 255, 255);
+      padding: 10px;
+      border-radius: 10%;
+      color: #000000;
+      box-shadow: 2px 2px 5px 3px rgba(119, 117, 117, 0.5);
+      transition: 0.5s;
+}
+
+.owl-nav .owl-prev i:hover,
+.owl-nav .owl-next i:hover{
+    background: #000000;
+    color: white;
+}
+
+.wrapper2{
+    position: relative;
+    text-align: center;
+}
+
+.wrapper2 .grid{
+    grid-template-columns: repeat(4,1fr);
+}
+
+.wrapper .box{
+    box-shadow: 0 0 20px 3px rgb(0 0 0 / 5%);
+    padding: 20px;
+    transition: 0.5s;
+}
+
+.wrapper2 i{
+    margin: 10px 0 15px 0;
+    color: #000000;
+    font-size: 30px;
+}
+
+.wrapper h3{
+    font-size: 20px;
+}
+
+.wrapper2 span{ 
+    padding: 10px;
+    background: #f5e8d1;
+    color: #313538;
+    border-radius: 50%;
+}
+
+.wrapper2 .box:hover{
+    background: #0f0f0f;
+    cursor: pointer;
+}
+
+.wrapper2 .box:hover span{
+    background: #fff;
+}
+
+.wrapper2 .box:hover p,
+.wrapper2 .box:hover h3,
+.wrapper2 .box:hover i{
+    color: white;
+}
+
+.wrapper2::after{
+    content: '';
+    position: absolute;
+    top: -15%;
+    left: 0;
+    background-image: url(img/line1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 75px;
+    width: 100%;
+    z-index: 2;
+}
+
+.room{
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.room.wrapper2::after{
+    display: none;
+    top: 105%;
+    background-image: url(img/line2.png);
+}
+
+.grid2{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px;
+}
+
+.room img{
+    width: 100%;
+    height: 100%;
+    margin-left: 20px;
+}
+
+.room h3{
+    margin: 0;
+    padding: 0;
+}
+
+.timer{
+    position: relative;
+    text-align: center;
+    padding-top: 12%;
+}
+
+.background::after{
+    content: '';
+    position: absolute;
+    top: 0%;
+    width: 100%;
+    height: 100% ;
+    background: rgba(119, 117, 117, 0.5) ;
+}
+
+.timer.wrapper::after{
+    background-image: url(img/bas-van-den-eijkhof-s6W9cOkOFHc-unsplash.jpg) ;
+}
+
+.timer.about::after{
+    z-index: 1;
+    top: 0;
+    background: url(img/line2.png);
+}
+
+.timer.about::before{
+    z-index: 1;
+    bottom: 0;
+    background: url(img/line2.png);
+}
+
+.timer h2,
+.timer h5{
+    color: white;
+    text-align: center;
+}
+
+.timer .container{
+    position: relative;
+}
+
+.timer h2 span{
+    font-family: sans-serif;
+}
+
+.clock span{
+    color: white;
+    font-size: 50px;
+    line-height: 50px;
+}
+
+.clock p{
+    color: white;
+    font-size: 18px;
+    line-height: 3px;
+}
+
+.offer img{
+    width: 100%;
+    height: 100%;
+}
+
+.offer .right{
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 0 0 20px 3px rgb(0 0 0 / 5%)
+}
+
+.offer .content h4{
+    font-size: 20px;
+    color: #313538;
+    font-family: serif;
+}
+
+.offer .rate i{
+    font-size: 13px;
+    color: #a4a4a4;
+    margin: 10px 10px 20px 0;
+}
+
+.offer .content h5{
+    color: #313538;
+    margin-bottom: 10px;
+}
+
+.offer .box{
+    transition: 0.5s;
+}
+
+.offer .box:hover{
+    transform: translateY(-10px);
+}
+
+.area img{
+    margin: 0 0 20px 80px;
+}
+
+.area ul li{
+    display: inline-block;
+    font-weight: 500;
+    color: #a4a4a4;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.area .left{
+    position: relative;
+}
+
+.area .left::after{
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+    width: 85%;
+    height: 92%;
+    margin: 30px;
+    background: #0f0f0f;
+    z-index: -1;
+}
+
+.offer2 .heading{
+    padding-top: 10%;
+    text-align: center;
+}
+
+.offer2 .heading h3{
+    color: white;
+}
+
+.offer2.wrapper{
+    background-image: url(img/febrian-zakaria-jA5AIfQpP4E-unsplash.jpg);
+    height: 90vh;
+    background-attachment: scroll;
+}
+
+.offer2.timer{
+    padding-top: 0%;
+}
+
+.offer2.wrapper .container{
+    max-width: 85%;
+    margin: auto;
+}
+
+.offer2 .box{
+    background: white;
+    padding: 30px;
+    text-align: left;
+    transition: 0.5s;
+}
+
+.offer2 .box:hover{
+    transform: translateY(-10px);
+    cursor: pointer;
+}
+
+.offer2 .box h5{
+    color: #313538;
+    text-align: left;
+    font-weight: 400;
+    list-style: 5px;
+    word-spacing: 10px;
+}
+
+.offer2 .box h3{
+    font-size: 20px;
+    margin: 10px 0 10px 0;
+}
+
+.offer2 label{
+    color: #a4a4a4;
+}
+
+.offer2 .grid {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.offer2 .flex i{
+    margin: 0 20px 20px 0;
+    font-weight: 400;
+    color: #313538;
+}
+
+.customer .top{
+    padding: 30px;
+    max-width: 60%;
+    margin: auto;
+    text-align: center;
+    box-shadow: 0 0 20px 3px rgb(0 0 0 / 5%);
+}
+
+.customer i{
+    color: #313538;
+    font-size: 13px;
+}
+
+.customer .item h3{
+    font-size: 20px;
+}
+
+.customer img{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+
+.customer .admin{
+    justify-content: center;
+}
+
+.customer .admin h3{
+    margin: 0;
+}
+
+.customer .text{
+    margin: 10px;
+}
+
+.customer span{
+    opacity: 0.7;
+}
+
+
+
+
+
+
+
